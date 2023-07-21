@@ -13,11 +13,12 @@ const title = () => {
 const Header = () => {
     return(
         <div className="Header">
+            <div className="logo">
             <title />
-            <div className="nav-items">
-                <ul>
-                    <li>
-                       const [searchInput,setsearchInput] = useState();
+            </div>
+
+            <div className="Search">
+                const [searchInput,setsearchInput] = useState();
                        return(
                         <>
                         {
@@ -30,17 +31,29 @@ const Header = () => {
                                         setsearchInput(e.target.value)
                                        }
                                     }
-                                    />
+                                />
+                                <button className="search-btn" onClick={ () => {
+                                    const data= filterData(searchInput,);
+                                    setsearchInput(data);
+                                }
+
+                                }
+                                >Search</button>
                             </div>
                         }
                         </>
                        )
+                      
 
-                    </li>
-                    <li>Wishlist</li>
-                    <li>SignIn</li>
-                    <li>Register?</li>
-                </ul>
+            </div>
+
+            <div className="wishlist">
+                <a class="w-list">wishlist</a>
+            </div>
+
+            <div className="authenticate">
+                <a class="login">LogIn</a>
+                <a class="register">SignUp</a>
             </div>
         </div>
     )
