@@ -1,4 +1,4 @@
-export const pcard = ({
+export const Card = ({
      pname, image, rating, link}) => {
 
         return(
