@@ -1,13 +1,12 @@
+import React from 'react';
 import { useState } from "react";
-
-
 const Header = () => {
     const [searchInput,setsearchInput] = useState();
     return(
         <div className="Header">
             <div className="logo">
             <>
-             <a href ="/"></a>
+             {/* <a href ="/"></a> */}
              <img className="logo"
               alt="logo"
               src="https://img.favpng.com/21/7/18/autumn-leaves-drawing-leaf-png-favpng-VaQBk1pFTxj0iv83RDQbP0GHz.jpg"/>
@@ -30,8 +29,8 @@ const Header = () => {
                                 }
                                 />
                       <button className="search-btn" onClick={ () => {
-                         const data= filterData(searchInput,);
-                         setsearchInput(data);
+                        // const data= filterData(searchInput,);
+                         //setsearchInput(data);
                           }
                         }>Search</button>
                    </div>
@@ -48,8 +47,8 @@ const Header = () => {
             </div>
 
             <div className="authenticate">
-                <a class="login">LogIn /</a>
-                <a class="register"> SignUp</a>
+                {/* <a class="login">LogIn /</a>
+                <a class="register"> SignUp</a> */}
             </div>
         </div>
     )
