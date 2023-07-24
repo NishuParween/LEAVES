@@ -1,7 +1,17 @@
 import React from 'react';
 import { useState } from "react";
+import { product_list } from "./product-list";
+
+function filterData(searchInput,productList) {
+    const filterData = productList.filter((product) =>
+    product.pname.includes(searchInput)
+    );
+    return filterData;
+}
+
 const Header = () => {
     const [searchInput,setsearchInput] = useState();
+    const [productList,setproductList] = useState(product_list);
     return(
         <div className="Header">
             <div className="logo">
@@ -29,8 +39,8 @@ const Header = () => {
                                 }
                                 />
                       <button className="search-btn" onClick={ () => {
-                        // const data= filterData(searchInput,);
-                         //setsearchInput(data);
+                        const data= filterData(searchInput,productList);
+                        setsearchInput(data);
                           }
                         }>Search</button>
                    </div>
@@ -47,8 +57,8 @@ const Header = () => {
             </div>
 
             <div className="authenticate">
-                {/* <a class="login">LogIn /</a>
-                <a class="register"> SignUp</a> */}
+                <a class="login">LogIn /</a>
+                <a class="register"> SignUp</a>
             </div>
         </div>
     )

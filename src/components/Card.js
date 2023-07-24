@@ -6,7 +6,7 @@ export const Card = ({ pname, image, rating, link }) => {
         <img className="w-full h-100" src={image} alt="product" />
         <div className="px-6 py-4">
           <h2 className="font-bold text-xl mb-2">{pname}</h2>
-          <h3 className="text-gray-600 mb-2">Rating: {rating}</h3>
+          <h3 className="text-black-600 mb-2">Rating: {rating}</h3>
         </div>
         <div className="px-6 py-4 flex justify-between">
           <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">

@@ -1,6 +1,7 @@
 import React from 'react';
 import { product_list } from "./product-list";
 import { Card } from "./Card";
+import Header from "./components/Header";
 
 const Body = () => {
     return (
