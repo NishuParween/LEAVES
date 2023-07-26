@@ -1,20 +1,31 @@
-import React from 'react';
+import React, { useState } from "react";
 import { product_list } from "./product-list";
 import { Card } from "./Card";
-import Header from "./components/Header";
+import Header from "./Header";
+import { useSelector } from "react-redux";
+import { useEffect } from "react";
 
 const Body = () => {
-    return (
-        <>
-            <div className="container">
-                <div className="product-list flex flex-wrap">
-                    {product_list.map((product) => {
-                        return <Card {...product} key={product.id} />;
-                    })}
-                </div>
-            </div>
-        </>
+  const searchItem = useSelector((store) => store.app.searchItem);
+  const [productList,setproductList] = useState(product_list);
+  useEffect(() => {
+    const filterData = product_list.filter((product) =>
+      product?.pname.includes(searchItem)
     );
-}
+    setproductList(filterData);
+  }, [searchItem]);
+  console.log("searchItem", searchItem);
+  return (
+    <>
+      <div className="container">
+        <div className="product-list flex flex-wrap">
+          {productList.map((product) => {
+            return <Card {...product} key={product.id} />;
+          })}
+        </div>
+      </div>
+    </>
+  );
+};
 
 export default Body;

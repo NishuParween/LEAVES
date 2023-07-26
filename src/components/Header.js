@@ -1,17 +1,19 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useState } from "react";
-import { product_list } from "./product-list";
-
-function filterData(searchInput,productList) {
-    const filterData = productList.filter((product) =>
-    product.pname.includes(searchInput)
-    );
-    return filterData;
-}
+//import { product_list } from "./product-list";
+import { useDispatch } from 'react-redux';
+import {modifySearchItem} from "../utilis/appSlice"; 
 
 const Header = () => {
-    const [searchInput,setsearchInput] = useState();
-    const [productList,setproductList] = useState(product_list);
+
+    const [searchInput,setsearchInput] = useState("SAVSEA soft charcoal toothbrush");
+    
+   const dispatch = useDispatch();
+   useEffect(() => {
+        dispatch(modifySearchItem(searchInput));
+      }, [searchInput])
+    
+
     return(
         <div className="Header">
             <div className="logo">
@@ -38,9 +40,9 @@ const Header = () => {
                                    }
                                 }
                                 />
-                      <button className="search-btn" onClick={ () => {
-                        const data= filterData(searchInput,productList);
-                        setsearchInput(data);
+                      <button className="search-btn" onClick={ (e) => {
+                        // const SearchResult= updateSearchItem(searchInput);
+                        setsearchInput(e.target.value);
                           }
                         }>Search</button>
                    </div>
@@ -57,8 +59,8 @@ const Header = () => {
             </div>
 
             <div className="authenticate">
-                <a class="login">LogIn /</a>
-                <a class="register"> SignUp</a>
+                {/* <a class="login">LogIn /</a> */}
+                {/* <a class="register"> SignUp</a> */}
             </div>
         </div>
     )
