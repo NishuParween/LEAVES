@@ -8,7 +8,7 @@ const appSlice = createSlice({
 
     reducers: {
         modifySearchItem: (state,search) => {
-            console.log("modify search",search);
+           /// console.log("modify search",search);
            state.searchItem = search.payload;
         }
     }

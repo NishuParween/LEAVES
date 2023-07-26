@@ -6,12 +6,12 @@ import {modifySearchItem} from "../utilis/appSlice";
 
 const Header = () => {
 
-    const [searchInput,setsearchInput] = useState("SAVSEA soft charcoal toothbrush");
+    const [searchInput,setsearchInput] = useState('Bag');
     
    const dispatch = useDispatch();
    useEffect(() => {
-        dispatch(modifySearchItem(searchInput));
-      }, [searchInput])
+       dispatch(modifySearchItem(searchInput));
+      }, [searchInput,dispatch]);
     
 
     return(

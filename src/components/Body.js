@@ -7,19 +7,24 @@ import { useEffect } from "react";
 
 const Body = () => {
   const searchItem = useSelector((store) => store.app.searchItem);
-  const [productList,setproductList] = useState(product_list);
-  useEffect(() => {
-    const filterData = product_list.filter((product) =>
-      product?.pname.includes(searchItem)
-    );
-    setproductList(filterData);
-  }, [searchItem]);
-  console.log("searchItem", searchItem);
+
+  const filteredProducts = product_list.filter((product) => {
+    return product.pname.toLowerCase().includes(searchItem.toLowerCase());
+  });
+
+  //const [productList,setproductList] = useState(product_list);
+ // useEffect(() => {
+ //   const filterData = product_list.filter((product) =>
+ //     product?.pname.includes(searchItem)
+ //   );
+ //   setproductList(filterData);
+ // }, [searchItem]);
+ // console.log("searchItem", searchItem);
   return (
     <>
       <div className="container">
         <div className="product-list flex flex-wrap">
-          {productList.map((product) => {
+          {filteredProducts.map((product) => {
             return <Card {...product} key={product.id} />;
           })}
         </div>
