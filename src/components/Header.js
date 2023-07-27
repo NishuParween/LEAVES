@@ -6,12 +6,12 @@ import {modifySearchItem} from "../utilis/appSlice";
 
 const Header = () => {
 
-    const [searchInput,setsearchInput] = useState('Bag');
-    
-   const dispatch = useDispatch();
-   useEffect(() => {
+    const [searchInput,setsearchInput] = useState('');
+    const dispatch = useDispatch();
+
+    const handleSearch = () => {
        dispatch(modifySearchItem(searchInput));
-      }, [searchInput,dispatch]);
+      };
     
 
     return(
@@ -40,11 +40,8 @@ const Header = () => {
                                    }
                                 }
                                 />
-                      <button className="search-btn" onClick={ (e) => {
-                        // const SearchResult= updateSearchItem(searchInput);
-                        setsearchInput(e.target.value);
-                          }
-                        }>Search</button>
+                      <button className="search-btn" 
+                      onClick = {handleSearch}>Search</button>
                    </div>
                  }
              </>

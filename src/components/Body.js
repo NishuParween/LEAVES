@@ -13,13 +13,13 @@ const Body = () => {
   });
 
   //const [productList,setproductList] = useState(product_list);
- // useEffect(() => {
- //   const filterData = product_list.filter((product) =>
- //     product?.pname.includes(searchItem)
- //   );
- //   setproductList(filterData);
- // }, [searchItem]);
- // console.log("searchItem", searchItem);
+  // useEffect(() => {
+  //   const filterData = product_list.filter((product) =>
+  //     product?.pname.includes(searchItem)
+  //   );
+  //   setproductList(filterData);
+  // }, [searchItem]);
+  // console.log("searchItem", searchItem);
   return (
     <>
       <div className="container">
