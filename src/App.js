@@ -11,7 +11,9 @@ function App() {
     <Provider store= {store}>
     <div className="App">
       <Header />
+      <div className="underline"></div>
       <Body />
+      <div className="underline"></div>
       <Footer />
    </div>
    </Provider>
