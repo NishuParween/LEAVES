@@ -1,8 +1,9 @@
 import React from 'react';
+import './card.css';
 
 export const Card = ({ pname, image, rating, link }) => {
     return (
-      <div className="flex flex-col max-w-sm mx-auto my-4 rounded overflow-hidden shadow-lg">
+      <div className="flex flex-col max-w-sm mx-auto my-4 rounded overflow-hidden shadow-lg increased-opacity bg-white">
         <img className="w-full h-60 object-cover" src={image} alt="product" />
         <div className="px-4 py-2">
           <h2 className="font-bold text-lg mb-1">{pname}</h2>
