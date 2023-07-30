@@ -1,0 +1,18 @@
+
+.increased-opacity {
+    opacity: 1; 
+  }
+
+  /* Define the CSS for the leaf image */
+.rating-leaf {
+  width: 20px; 
+  height: 20px;
+}
+
+/* Define CSS for the rating container */
+.rating-container {
+  display: flex;
+  align-items: center;
+}
+
+  
