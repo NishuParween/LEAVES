@@ -1,5 +1,8 @@
 import React from 'react';
 import './card.css';
+import images from './images';
+
+
 
 // Create a new Rating component
 const Rating = ({ rating }) => {
@@ -9,7 +12,7 @@ const Rating = ({ rating }) => {
   const leaves = Array.from({ length: 5 }, (_, index) => (
     <img
       key={index}
-      src={index < numberOfLeaves ? `leaf${index + 1}.png` : `empty-leaf.png`}
+      src={index < numberOfLeaves ? images[`leaf${index + 1}.png`] : images['empty-leaf.png']}
       alt={`Leaf ${index + 1}`}
       className="rating-leaf"
     />
@@ -17,6 +20,7 @@ const Rating = ({ rating }) => {
 
   return <div className="rating-container">{leaves}</div>;
 };
+
 
 
 export const Card = ({ pname, image, rating, link }) => {
