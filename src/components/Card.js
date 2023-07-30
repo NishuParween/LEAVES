@@ -38,7 +38,7 @@ export const Card = ({ pname, image, rating, link }) => {
           <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-3 rounded">
             Save
           </button>
-          <a href={link}>
+          <a href={link} target="_blank" rel="noopener noreferrer">
             <button className="bg-green-500 hover:bg-green-700 text-white font-bold py-1 px-3 rounded">
               Visit
             </button>
