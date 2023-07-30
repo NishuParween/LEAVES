@@ -27,8 +27,8 @@ export const Card = ({ pname, image, rating, link }) => {
         <img className="w-full h-60 object-cover" src={image} alt="product" />
         <div className="px-4 py-2">
           <h2 className="font-bold text-lg mb-1">{pname}</h2>
-          <Rating rating={rating} />
           
+          <Rating rating={rating} />
         </div>
         <div className="px-4 py-2 flex justify-between">
           <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-3 rounded">
