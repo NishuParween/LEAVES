@@ -18,7 +18,7 @@ const Rating = ({ rating }) => {
         index < filledLeaves // Filled leaves
           ? images[`leaf${index + 1}.png`]
           : index === filledLeaves && hasHalfLeaf // Half-filled leaf (if applicable)
-          ? images['half-leaf.png']
+          ? images['leaf1.png']
           : images['empty-leaf.png'] // Empty leaves
       }
       alt={`Leaf ${index + 1}`}
