@@ -4,7 +4,7 @@ export const product_list = [
         pname:"SAVSEA soft charcoal toothbrush",
         image:"https://m.media-amazon.com/images/I/81yCCF-xyaS._SL1500_.jpg",
         category:"toothbrush",
-        rating: 4.2,
+        rating: 4,
         link:"https://www.amazon.in/SavSea-Soft-Charcoal-bamboo-toothbrush/dp/B08RXHC79K/ref=sr_1_5?keywords=sustainable%2Bproducts&qid=1689952914&sr=8-5&th=1",
     },
     {
@@ -12,7 +12,7 @@ export const product_list = [
         pname:"NECAVU vegetable bag",
         image:"https://m.media-amazon.com/images/I/A1w9MSOxlfL._SL1500_.jpg",
         category:"bag",
-        rating:4,
+        rating:3,
         link:"https://www.amazon.in/Eco-friendly-natural-vegetables-vegetable-Multi-purpose/dp/B09N2MTK8Y/ref=sr_1_6?keywords=sustainable+products&qid=1689952914&sr=8-6",
     },
     {
@@ -68,7 +68,7 @@ export const product_list = [
         pname:"Happi laundry detergent",
         image:"https://m.media-amazon.com/images/I/61vvArV2SkL._SL1500_.jpg",
         category:"cleaning",
-        rating:4,
+        rating:3,
         link:"https://www.amazon.in/Happi-Planet-Eco-Friendly-Detergent-Biodegradable/dp/B0B42X9MC9/ref=sr_1_25?keywords=sustainable+products&qid=1689952914&sr=8-25",
     },
     {
