@@ -60,7 +60,7 @@ const Header = () => {
 
             <div className="authenticate">
                  <a class="login">LogIn /</a>
-                 <a class="register"> SignUp</a>
+                 {/* <a class="register"> SignUp</a> */}
             </div>
         </div>
       </>
