@@ -71,3 +71,25 @@
   margin: 20px 0;
 }
 
+/* Footer styles */
+
+
+
+.back-to-top-button {
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  bottom: 1px;
+  right: 20px;
+  padding: 5px;
+  display: block;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.back-to-top-button:hover {
+  background-color: #0056b3;
+}
