@@ -23,7 +23,7 @@
 
 /* Adjust the width as per your requirement to fit four cards in a row */
  .flex-col { 
-  /* width: calc(25% - 1rem); */
+  /* width:25%; */
   margin-bottom: 20px;
   margin-left: 25px;
   margin-right: 25px;
